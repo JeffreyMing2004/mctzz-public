@@ -36,7 +36,19 @@
 
 图片素材已全部本地化到 `public/images/`（封面 / 头像 / 品牌图），运行时不依赖外部 CDN。
 
-> 更新数据：配置好访问凭据后执行 `npm run prepare-data` 可重新拉取数据并下载图片。
+### 播放量每日更新
+
+播放量数据每天北京时间 0 点自动更新（与原站「每日 0 点定时更新」行为一致）：
+
+- GitHub Actions（`.github/workflows/update-views.yml`）在 UTC 16:00（北京 0:00）运行
+  `scripts/update-views.mjs`，从 B 站公开接口刷新 41 个视频的播放量/弹幕数，
+  跨天时把更新前的播放量记为昨日值（保证「较昨日」口径），数据有变化才提交。
+- 页面启动后异步拉取 `public/data/bilibili_videos.json` 最新快照，并内置
+  0 点定时器（进入下一日凌晨自动重新拉取，此后每 24 小时一次），复刻原站定时器行为。
+- 手动更新：`node scripts/update-views.mjs`。
+
+> 更新数据：`npm run prepare-data` 重新拉取整站数据并下载图片；播放量每日由
+> GitHub Actions 自动更新（北京时间 0 点）。
 
 ## 本地开发
 

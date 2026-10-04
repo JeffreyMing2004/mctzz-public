@@ -1,0 +1,40 @@
+name: daily view refresh
+
+# 每天北京时间 0 点（UTC 16:00）刷新 B 站播放量数据并提交，
+# 页面推送部署后即可读到最新快照。
+on:
+  schedule:
+    - cron: "0 16 * * *" # UTC 16:00 = Asia/Shanghai 00:00
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-views
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Refresh bilibili view counts
+        run: node scripts/update-views.mjs
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain src/data/bilibili_videos.json public/data/bilibili_videos.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/data/bilibili_videos.json public/data/bilibili_videos.json
+            git commit -m "每日0点播放量更新"
+            git push
+          else
+            echo "数据无变化，跳过提交"
+          fi

@@ -1,22 +1,63 @@
 <script setup>
-import { computed, ref } from "vue";
-import videos from "../data/bilibili_videos.json";
+import { computed, onMounted, onUnmounted, ref } from "vue";
+import bundledVideos from "../data/bilibili_videos.json";
 
 const seriesFilters = ["全员逃走中", "全员密告中", "全员推理中"];
 const activeSeries = ref("");
+// 初始用构建时快照渲染，挂载后异步拉取 public/data 下的最新快照
+const videos = ref(bundledVideos);
 
 const list = computed(() =>
-  videos
+  videos.value
     .filter((v) => !activeSeries.value || v.series_type === activeSeries.value)
     .sort((a, b) => b.view_count - a.view_count),
 );
 
 const lastUpdate = computed(() => {
-  const dates = videos
+  const dates = videos.value
     .map((v) => v.last_update_date)
     .filter(Boolean)
     .sort();
   return dates[dates.length - 1] ?? "";
+});
+
+// 原站口径：快照日期为今天则显示「今日 00:00 更新」，否则显示日期
+const isToday = computed(() => {
+  const local = new Date();
+  const t = `${local.getFullYear()}-${String(local.getMonth() + 1).padStart(2, "0")}-${String(local.getDate()).padStart(2, "0")}`;
+  return lastUpdate.value === t;
+});
+
+// 与原站一致：加载最新数据；到达 0 点后自动重新拉取，之后每 24h 一次
+let midnightTimer = null;
+let dailyTimer = null;
+
+async function fetchLatest() {
+  try {
+    const res = await fetch(`/data/bilibili_videos.json?t=${Date.now()}`);
+    if (!res.ok) return;
+    const fresh = await res.json();
+    if (Array.isArray(fresh) && fresh.length) videos.value = fresh;
+  } catch {
+    /* 拉取失败时继续用当前快照 */
+  }
+}
+
+onMounted(() => {
+  fetchLatest();
+  const now = new Date();
+  const nextMidnight = new Date(now);
+  nextMidnight.setDate(nextMidnight.getDate() + 1);
+  nextMidnight.setHours(0, 0, 0, 0);
+  midnightTimer = setTimeout(() => {
+    fetchLatest();
+    dailyTimer = setInterval(fetchLatest, 24 * 60 * 60 * 1000);
+  }, nextMidnight.getTime() - now.getTime());
+});
+
+onUnmounted(() => {
+  clearTimeout(midnightTimer);
+  clearInterval(dailyTimer);
 });
 
 function formatViews(n) {
@@ -54,7 +95,7 @@ function delta(v) {
           <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
           <path d="M21 3v5h-5" />
         </svg>
-        最后更新：{{ lastUpdate }}
+        最后更新：{{ isToday ? "今日 00:00 更新" : lastUpdate }}（每日 0 点更新）
       </p>
 
       <div class="filter-bar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
