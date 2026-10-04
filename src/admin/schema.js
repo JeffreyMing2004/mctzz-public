@@ -139,7 +139,7 @@ export const COLLECTIONS = [
     label: "排行榜",
     file: "src/data/rankings.json",
     hasId: true,
-    list: ["player", "season", "episode_number", "total_score", "rank"],
+    list: ["player_id", "season", "episode_number", "total_score", "rank"],
     fields: [
       {
         key: "player_id",

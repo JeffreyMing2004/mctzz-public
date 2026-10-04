@@ -54,6 +54,21 @@
 >   
 > GitHub Actions 自动更新（北京时间 0 点）。
 
+### 后台管理（/admin）
+
+访问 `/admin`（不出现在公开导航）可在线更新：往期内容、期数链接、系列/季分类、
+游戏规则、梗百科、梗分类、排行榜、玩家档案、猎人档案。
+
+- 数据以 GitHub 仓库为准：打开后台会从仓库读取当前 JSON；保存时通过 GitHub
+  Contents API 逐文件提交（提交信息为 `后台更新: <文件路径>`）。
+- 公开仓库可免令牌加载预览；**保存需要填入 GitHub 令牌**（Fine-grained Token，
+  勾选该仓库的 Contents: Read and write；经典 Token 则需 `repo` 权限）。
+  令牌仅存于浏览器 sessionStorage，不会写入仓库或 localStorage。
+- 推送成功后需重新部署构建才反映到线上；若仓库配置了 push 自动部署（如
+  GitHub Pages）则自动生效。
+- 图片暂不支持在线上传：请先把图片提交到仓库 `public/images/` 对应目录，
+  再在后台填写 `/images/...` 路径。
+
 ## 本地开发
 
 ```bash
