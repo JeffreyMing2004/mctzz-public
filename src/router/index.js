@@ -37,6 +37,11 @@ const routes = [
     name: "hunters",
     component: () => import("../views/HuntersView.vue"),
   },
+  {
+    path: "/admin",
+    name: "admin",
+    component: () => import("../views/AdminView.vue"),
+  },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 
@@ -57,6 +62,7 @@ const titles = {
   "bilibili-rankings": "播放量 - 方块逃亡中",
   players: "玩家档案 - 方块逃亡中",
   hunters: "猎人档案 - 方块逃亡中",
+  admin: "后台管理 - 方块逃亡中",
 };
 
 router.afterEach((to) => {

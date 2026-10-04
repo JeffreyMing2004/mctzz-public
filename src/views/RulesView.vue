@@ -1,28 +1,6 @@
 <script setup>
 import PageHeader from "../components/PageHeader.vue";
-
-const sections = [
-  {
-    title: "基础规则",
-    desc: "游戏的核心机制和基本玩法",
-    items: [
-      "玩家需要在限定区域内躲避猎人追捕",
-      "被捕即被淘汰",
-      "完成游戏过程中发布的任务",
-      "最后存活至游戏时间结束的玩家获胜",
-    ],
-  },
-  {
-    title: "单元剧",
-    desc: "游戏中主人公发生的故事",
-    items: [
-      "任务的完成度会影响结局",
-      "玩家可以在游戏过程遇到单元剧角色",
-      "NPC 全真人扮演",
-      "优秀 CV 老师配音",
-    ],
-  },
-];
+import rules from "../data/rules.json";
 </script>
 
 <template>
@@ -31,7 +9,7 @@ const sections = [
 
     <div class="container rules-wrap">
       <section
-        v-for="(sec, i) in sections"
+        v-for="(sec, i) in rules"
         :key="sec.title"
         class="rule-block"
         v-reveal="{ y: 20, duration: 0.5, delay: (i + 1) * 0.1 }"
