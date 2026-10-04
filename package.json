@@ -1,0 +1,21 @@
+{
+  "name": "mctzz-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "方块逃亡中（全员逃走中系列）官方资料站 — Vue 3 重建版",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare-data": "node scripts/prepare-data.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}

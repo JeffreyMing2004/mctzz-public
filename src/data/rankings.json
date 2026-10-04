@@ -1,0 +1,591 @@
+[
+  {
+    "id": "79b0a78b-9cc1-4d36-8934-f783706421ad",
+    "player_id": "2087d68c-8fc2-48c9-8043-058264380437",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 24720,
+    "rank": 11,
+    "sort_order": 0
+  },
+  {
+    "id": "1a53d4c8-e814-45c1-9ffb-f461a77c3a99",
+    "player_id": "c8eb1123-6126-4a09-a0dd-83ee0a12143f",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 157550,
+    "rank": 1,
+    "sort_order": 0
+  },
+  {
+    "id": "bde486cc-0278-4cf8-b064-345b6d01ec2a",
+    "player_id": "3c788c9c-13ec-4ab3-9867-c6617ecce90e",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 3970,
+    "rank": 20,
+    "sort_order": 0
+  },
+  {
+    "id": "8516eee8-a620-4747-a0bc-3237c92daa01",
+    "player_id": "fb423d81-efb4-4ff5-90aa-1bddc9a684ff",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 14647,
+    "total_score": 420000,
+    "rank": 1,
+    "sort_order": 0
+  },
+  {
+    "id": "1f59e66d-e7b4-465b-bf9c-bd7a4a06a796",
+    "player_id": "216f4405-9ae8-4e87-8592-25c4ed2e39c2",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 2755,
+    "total_score": 77300,
+    "rank": 2,
+    "sort_order": 0
+  },
+  {
+    "id": "c406452a-f6cc-4f97-aad1-5dd65ff85dcb",
+    "player_id": "c8eb1123-6126-4a09-a0dd-83ee0a12143f",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 24287,
+    "total_score": 41560,
+    "rank": 3,
+    "sort_order": 0
+  },
+  {
+    "id": "df50a054-4bcc-474b-83c2-4948627817dd",
+    "player_id": "dd8a9587-24f9-4a05-b8fd-2ea93d9d5dd3",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 8803,
+    "total_score": 40780,
+    "rank": 4,
+    "sort_order": 0
+  },
+  {
+    "id": "13a0c218-93d6-45fd-b585-114a0b9e4e9a",
+    "player_id": "d759e7f5-4143-4fe2-a656-461575907f9a",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 8803,
+    "total_score": 40350,
+    "rank": 5,
+    "sort_order": 0
+  },
+  {
+    "id": "649f24d4-6040-4b52-b5b0-cc668a53130e",
+    "player_id": "1573c27c-1a35-4ff1-9ced-3832bf9ba32d",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 10464,
+    "total_score": 39910,
+    "rank": 6,
+    "sort_order": 0
+  },
+  {
+    "id": "20017bf2-2622-4b2e-b5b4-698a816b3dde",
+    "player_id": "ca082a3b-09fb-4f7c-a0a1-c274bd201123",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 6519,
+    "total_score": 38670,
+    "rank": 7,
+    "sort_order": 0
+  },
+  {
+    "id": "9b44cbed-3051-4321-9174-22cbc71e4cff",
+    "player_id": "5c639a42-773f-49cb-8929-9c86f7c07fd3",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 13615,
+    "total_score": 38050,
+    "rank": 8,
+    "sort_order": 0
+  },
+  {
+    "id": "801201cd-f514-465c-805b-b4ceae016fd0",
+    "player_id": "3c788c9c-13ec-4ab3-9867-c6617ecce90e",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 7135,
+    "total_score": 36490,
+    "rank": 9,
+    "sort_order": 0
+  },
+  {
+    "id": "976a4cfc-9575-4194-bac2-37426e3d8e53",
+    "player_id": "8c4d1b0e-065a-4d22-8b1a-298eb1a5b028",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 5455,
+    "total_score": 33780,
+    "rank": 10,
+    "sort_order": 0
+  },
+  {
+    "id": "b8f91e49-5c36-41ec-a9a0-9266dd879c52",
+    "player_id": "2087d68c-8fc2-48c9-8043-058264380437",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 5071,
+    "total_score": 31730,
+    "rank": 11,
+    "sort_order": 0
+  },
+  {
+    "id": "9dc66f25-05f7-48e2-96e4-8151f251e145",
+    "player_id": "69ad7e4a-baf6-41f3-a00d-3e79d44ed926",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 2973,
+    "total_score": 27470,
+    "rank": 12,
+    "sort_order": 0
+  },
+  {
+    "id": "b5e4ddee-804e-4ac6-b4d6-fe31bf1f11e1",
+    "player_id": "3983b9a2-b408-43c6-8fdd-5a1a3fb2814b",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 8572,
+    "total_score": 27220,
+    "rank": 13,
+    "sort_order": 0
+  },
+  {
+    "id": "767bc217-738b-4253-8d4c-5a7556e0cd57",
+    "player_id": "2e41a3b1-89d1-4642-b934-71ee0086d4eb",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 1196,
+    "total_score": 24810,
+    "rank": 14,
+    "sort_order": 0
+  },
+  {
+    "id": "e11938e0-b540-4ddb-9578-b87ffb08c179",
+    "player_id": "36170705-2421-45b6-bef2-9a6ec1e13445",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 7947,
+    "total_score": 21750,
+    "rank": 15,
+    "sort_order": 0
+  },
+  {
+    "id": "4454bcdb-0269-4291-a8df-915c1ea5dbb0",
+    "player_id": "9feae28b-3b19-4a82-9c2b-bdab0e8b8ab7",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 5216,
+    "total_score": 17380,
+    "rank": 16,
+    "sort_order": 0
+  },
+  {
+    "id": "1e792af9-3f07-4e17-8b1b-a09ee2c192df",
+    "player_id": "b2106d57-d05b-40b4-90d1-066831927e7d",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 3692,
+    "total_score": 11900,
+    "rank": 17,
+    "sort_order": 0
+  },
+  {
+    "id": "c5653aac-30cc-4991-99c5-9af36d9c4d97",
+    "player_id": "be927e08-281f-473e-972f-74ca2de86436",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 2565,
+    "total_score": 9880,
+    "rank": 18,
+    "sort_order": 0
+  },
+  {
+    "id": "df42c4c2-c4a9-423a-81d1-cecba87f2dfd",
+    "player_id": "d8105516-dc66-4bc6-b924-2d707d652f65",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 3170,
+    "total_score": 8900,
+    "rank": 19,
+    "sort_order": 0
+  },
+  {
+    "id": "8ca6d7cc-d9c7-465e-b0ce-e914ad9ca93b",
+    "player_id": "c6391367-59b1-4acd-b36e-39f82dbe99f4",
+    "episode_number": 2,
+    "season": 5,
+    "steps": 875,
+    "total_score": 1850,
+    "rank": 20,
+    "sort_order": 0
+  },
+  {
+    "id": "2249e68a-84e5-4e71-a59a-573daf2fa41b",
+    "player_id": "216f4405-9ae8-4e87-8592-25c4ed2e39c2",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 41960,
+    "rank": 2,
+    "sort_order": 0
+  },
+  {
+    "id": "b5a3828e-541f-4683-8295-080cb76ef6f3",
+    "player_id": "14f3e361-2609-4db0-b88f-336488ce9058",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 40730,
+    "rank": 4,
+    "sort_order": 0
+  },
+  {
+    "id": "0f8af60c-125c-4c89-865c-9b88ae66b995",
+    "player_id": "ad764af5-00a8-48f7-91a3-4bd62a8a2cde",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 37770,
+    "rank": 6,
+    "sort_order": 0
+  },
+  {
+    "id": "f81334f6-441e-4fb2-9871-7e16ebfdedb5",
+    "player_id": "b2106d57-d05b-40b4-90d1-066831927e7d",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 41480,
+    "rank": 3,
+    "sort_order": 0
+  },
+  {
+    "id": "e9c6d96f-c1d4-4f04-958f-70d6199462ec",
+    "player_id": "95641574-aed2-4301-b986-3118280145df",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 39470,
+    "rank": 5,
+    "sort_order": 0
+  },
+  {
+    "id": "0a9855b2-4e90-4054-b0fd-8489e812134f",
+    "player_id": "873f47f2-156e-4ce0-8d7b-89552d64d202",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 36430,
+    "rank": 7,
+    "sort_order": 0
+  },
+  {
+    "id": "3b101af5-88af-4cce-b859-c61c77f15a41",
+    "player_id": "8c4d1b0e-065a-4d22-8b1a-298eb1a5b028",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 34360,
+    "rank": 8,
+    "sort_order": 0
+  },
+  {
+    "id": "60622ab7-4beb-4fbb-8582-35bd68a3f1ed",
+    "player_id": "3983b9a2-b408-43c6-8fdd-5a1a3fb2814b",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 29910,
+    "rank": 9,
+    "sort_order": 0
+  },
+  {
+    "id": "61c792b2-25dd-4d00-8e59-308eeb9460ae",
+    "player_id": "9feae28b-3b19-4a82-9c2b-bdab0e8b8ab7",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 25890,
+    "rank": 10,
+    "sort_order": 0
+  },
+  {
+    "id": "bc650bd8-7b44-43e9-ab18-b5e6ea04e6c9",
+    "player_id": "d759e7f5-4143-4fe2-a656-461575907f9a",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 19150,
+    "rank": 12,
+    "sort_order": 0
+  },
+  {
+    "id": "fda5f5d2-318f-444a-8f30-ece650002672",
+    "player_id": "a188cc9a-2d4b-45a2-bdba-93b44c1acc0a",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 16900,
+    "rank": 13,
+    "sort_order": 0
+  },
+  {
+    "id": "62126ead-6cda-46c3-985e-9375f3e01d90",
+    "player_id": "1573c27c-1a35-4ff1-9ced-3832bf9ba32d",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 14780,
+    "rank": 14,
+    "sort_order": 0
+  },
+  {
+    "id": "b89c5dfb-03eb-4031-957c-38bf95e210c8",
+    "player_id": "785f5d45-9925-43b5-b46e-4a932d3ba8ad",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 14000,
+    "rank": 15,
+    "sort_order": 0
+  },
+  {
+    "id": "e2a2272d-d6e4-498d-af73-bdcd77345855",
+    "player_id": "2e41a3b1-89d1-4642-b934-71ee0086d4eb",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 10400,
+    "rank": 16,
+    "sort_order": 0
+  },
+  {
+    "id": "89dadfcc-1b68-4f85-8eed-52b334276188",
+    "player_id": "be927e08-281f-473e-972f-74ca2de86436",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 9920,
+    "rank": 17,
+    "sort_order": 0
+  },
+  {
+    "id": "2ea534fd-a540-4642-aa0b-0fa8a31e9261",
+    "player_id": "69ad7e4a-baf6-41f3-a00d-3e79d44ed926",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 7910,
+    "rank": 18,
+    "sort_order": 0
+  },
+  {
+    "id": "f9060a7f-729e-487d-962c-878dcd39d2b5",
+    "player_id": "c6391367-59b1-4acd-b36e-39f82dbe99f4",
+    "episode_number": 1,
+    "season": 5,
+    "steps": 0,
+    "total_score": 6020,
+    "rank": 19,
+    "sort_order": 0
+  },
+  {
+    "id": "b83e3518-3f1f-430a-83b0-9a00569fd723",
+    "player_id": "2087d68c-8fc2-48c9-8043-058264380437",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 10127,
+    "total_score": 41340,
+    "rank": 4
+  },
+  {
+    "id": "48e5624a-6732-4e7b-a98e-885ba57399f5",
+    "player_id": "b2e08c72-ccf0-47e6-a2f3-46e50e8318ef",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 14958,
+    "total_score": 39960,
+    "rank": 5
+  },
+  {
+    "id": "4fae8d2d-6d09-4c57-a9f3-69e05670d493",
+    "player_id": "216f4405-9ae8-4e87-8592-25c4ed2e39c2",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 4413,
+    "total_score": 38690,
+    "rank": 6
+  },
+  {
+    "id": "81d15be5-8f05-4129-8f8d-f7dd358b9a4c",
+    "player_id": "f10c7ab1-e77f-4210-b6b1-c2ce1a6b8550",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 5987,
+    "total_score": 14400,
+    "rank": 18
+  },
+  {
+    "id": "f9fa131f-c2ea-4ba4-9a3b-1017222c2eec",
+    "player_id": "3c788c9c-13ec-4ab3-9867-c6617ecce90e",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 2073,
+    "total_score": 11870,
+    "rank": 19
+  },
+  {
+    "id": "0e6b9e82-257b-40b2-b457-affe8a780f0f",
+    "player_id": "c73d86c1-fc83-4934-bd53-d0643b851d44",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 3041,
+    "total_score": 11520,
+    "rank": 20
+  },
+  {
+    "id": "003a8a71-c300-4157-87cd-d3c2922582e2",
+    "player_id": "9feae28b-3b19-4a82-9c2b-bdab0e8b8ab7",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 1870,
+    "total_score": 4130,
+    "rank": 21
+  },
+  {
+    "id": "74f0103a-ceab-4a42-b2a3-b5193ef286c0",
+    "player_id": "c8eb1123-6126-4a09-a0dd-83ee0a12143f",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 20131,
+    "total_score": 420000,
+    "rank": 1
+  },
+  {
+    "id": "bc92f664-637f-4da6-ac93-b82a1ce1d8db",
+    "player_id": "d759e7f5-4143-4fe2-a656-461575907f9a",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 4625,
+    "total_score": 54000,
+    "rank": 2
+  },
+  {
+    "id": "3a1975c0-8fba-4d9e-bcee-78eb5c8b60d3",
+    "player_id": "3983b9a2-b408-43c6-8fdd-5a1a3fb2814b",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 16811,
+    "total_score": 37960,
+    "rank": 7
+  },
+  {
+    "id": "aa4f9a13-e59d-4d9c-8cd5-dd814cb6784c",
+    "player_id": "ad764af5-00a8-48f7-91a3-4bd62a8a2cde",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 5231,
+    "total_score": 37230,
+    "rank": 8
+  },
+  {
+    "id": "17f528d5-9aad-4090-9fc8-6f9e98fc638f",
+    "player_id": "36170705-2421-45b6-bef2-9a6ec1e13445",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 11940,
+    "total_score": 36520,
+    "rank": 9
+  },
+  {
+    "id": "6788a6cd-5210-4c22-9a60-9331f7c2a78e",
+    "player_id": "b2106d57-d05b-40b4-90d1-066831927e7d",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 14909,
+    "total_score": 41650,
+    "rank": 3
+  },
+  {
+    "id": "31699202-13b9-4174-bd3f-e6abaec94d66",
+    "player_id": "9efcc00a-e254-4bce-8126-d2fc9e4ce63b",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 12129,
+    "total_score": 34930,
+    "rank": 10
+  },
+  {
+    "id": "a6531d8f-4498-4349-a39c-a1f56c7d69f1",
+    "player_id": "2e41a3b1-89d1-4642-b934-71ee0086d4eb",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 1661,
+    "total_score": 32580,
+    "rank": 11
+  },
+  {
+    "id": "a1b611d8-5dc3-4f62-8936-171b62515388",
+    "player_id": "70ae9ca7-8135-4123-8fda-149b16657dd9",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 10140,
+    "total_score": 29910,
+    "rank": 12
+  },
+  {
+    "id": "bcc79695-dfa6-4d77-9df6-b60c83d1ba12",
+    "player_id": "1817fcbf-dd01-4db4-90c5-7ba4930af920",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 8601,
+    "total_score": 29770,
+    "rank": 13
+  },
+  {
+    "id": "782e611e-c863-47fb-89f4-e606b0d24084",
+    "player_id": "8c4d1b0e-065a-4d22-8b1a-298eb1a5b028",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 5810,
+    "total_score": 29070,
+    "rank": 14
+  },
+  {
+    "id": "3637d60c-e609-48c0-b6af-46582a3a3e01",
+    "player_id": "dd8a9587-24f9-4a05-b8fd-2ea93d9d5dd3",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 7504,
+    "total_score": 26540,
+    "rank": 15
+  },
+  {
+    "id": "753df3f6-5fbf-430e-8f60-ab87cea27fff",
+    "player_id": "be927e08-281f-473e-972f-74ca2de86436",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 4313,
+    "total_score": 23250,
+    "rank": 16
+  },
+  {
+    "id": "0d8105de-6c36-4fc1-b641-4c8148aff11a",
+    "player_id": "69ad7e4a-baf6-41f3-a00d-3e79d44ed926",
+    "episode_number": 3,
+    "season": 5,
+    "steps": 5429,
+    "total_score": 19130,
+    "rank": 17
+  }
+]
