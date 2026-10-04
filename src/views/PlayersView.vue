@@ -1,10 +1,12 @@
 <script setup>
 import { computed, ref } from "vue";
 import PageHeader from "../components/PageHeader.vue";
+import PlayerModal from "../components/PlayerModal.vue";
 import players from "../data/players.json";
 
 const keyword = ref("");
 const sortBy = ref("random");
+const selected = ref(null);
 let shuffleSeed = Math.random();
 
 const sortOptions = [
@@ -41,10 +43,10 @@ const list = computed(() => {
 
 <template>
   <div>
-    <PageHeader :parts="['玩家', '档案库']" subtitle="了解每位玩家的参赛历史、表现数据和个人特色" />
+    <PageHeader :parts="['玩家', '档案库']" subtitle="了解每位玩家的参赛历史、表现数据和个人特色" v-reveal="{ y: 20, duration: 0.6 }" />
 
     <div class="container">
-      <div class="toolbar">
+      <div class="toolbar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <div class="search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
             <circle cx="11" cy="11" r="8" />
@@ -67,15 +69,15 @@ const list = computed(() => {
         </div>
       </div>
 
-      <div class="player-grid">
-        <component
-          :is="p.bilibili_link ? 'a' : 'div'"
-          v-for="p in list"
+      <!-- :key 随搜索/排序变化，重放交错入场 -->
+      <div class="player-grid" :key="`${keyword}|${sortBy}|${shuffleSeed}`">
+        <button
+          v-for="(p, i) in list"
           :key="p.id"
-          :href="p.bilibili_link || undefined"
-          :target="p.bilibili_link ? '_blank' : undefined"
-          :rel="p.bilibili_link ? 'noopener noreferrer' : undefined"
+          type="button"
           class="player-card hover-lift"
+          v-reveal="{ y: 20, duration: 0.5, delay: Math.min(i * 0.06, 0.9) }"
+          @click="selected = p"
         >
           <img class="avatar" :src="p.avatar" :alt="p.name" loading="lazy" />
           <h3>{{ p.name }}</h3>
@@ -86,15 +88,37 @@ const list = computed(() => {
             <span class="count">参赛 {{ p.episodes }} 期</span>
           </div>
           <p class="platform">{{ p.declaration }}</p>
-        </component>
+        </button>
       </div>
 
       <p v-if="list.length === 0" class="empty-tip">没有找到匹配的玩家</p>
     </div>
+
+    <Transition name="modal">
+      <PlayerModal v-if="selected" :player="selected" @close="selected = null" />
+    </Transition>
   </div>
 </template>
 
 <style scoped>
+/* 弹窗过渡：遮罩淡入淡出 + 卡片缩放（原站 exit: scale .9, opacity 0） */
+.modal-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.modal-leave-active :deep(.modal),
+.modal-leave-active :deep(.overlay) {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-leave-to :deep(.modal) {
+  transform: scale(0.9);
+}
+
 .toolbar {
   display: flex;
   align-items: center;
@@ -189,6 +213,7 @@ const list = computed(() => {
   padding: 24px 18px;
   text-align: center;
   display: block;
+  cursor: pointer;
 }
 
 .avatar {

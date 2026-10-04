@@ -1,6 +1,5 @@
 <script setup>
 import { computed, ref } from "vue";
-import PageHeader from "../components/PageHeader.vue";
 import videos from "../data/bilibili_videos.json";
 
 const seriesFilters = ["全员逃走中", "全员密告中", "全员推理中"];
@@ -44,13 +43,13 @@ function delta(v) {
 
 <template>
   <div>
-    <PageHeader
-      :parts="['实时', '播放量']"
-      subtitle="追踪 B 站视频最新播放数据，按播放量从高到低排序"
-    />
+    <div class="page-header" v-reveal="{ y: 20, duration: 0.6 }">
+      <h1>实时<span class="accent">播放量</span></h1>
+      <p class="subtitle">追踪 B 站视频最新播放数据，按播放量从高到低排序</p>
+    </div>
 
     <div class="container">
-      <p class="update-info">
+      <p class="update-info" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="update-icon">
           <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" />
           <path d="M21 3v5h-5" />
@@ -58,7 +57,7 @@ function delta(v) {
         最后更新：{{ lastUpdate }}
       </p>
 
-      <div class="filter-bar">
+      <div class="filter-bar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <button
           type="button"
           class="filter-btn"
@@ -79,14 +78,15 @@ function delta(v) {
         </button>
       </div>
 
-      <div class="video-list">
+      <div class="video-list" :key="activeSeries">
         <a
           v-for="(v, i) in list"
           :key="v.id"
           :href="`https://www.bilibili.com/video/${v.bvid}`"
           target="_blank"
           rel="noopener noreferrer"
-          class="video-item hover-lift"
+          class="video-item hover-zoom rv-slide"
+          :style="{ '--rv-delay': `${Math.min(i * 0.06, 1.2)}s` }"
         >
           <span class="rank" :class="`rank-${i + 1}`">{{ i + 1 }}</span>
           <div class="thumb">
@@ -114,6 +114,33 @@ function delta(v) {
 </template>
 
 <style scoped>
+/* 视频条目：自左滑入 + 交错（原站 x:-20, duration .4, delay i*.06） */
+.rv-slide {
+  animation: rv-row 0.4s ease-out both;
+  animation-delay: var(--rv-delay, 0s);
+}
+
+@keyframes rv-row {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 原站 whileHover:{scale:1.02} */
+.hover-zoom {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.02);
+  border-color: var(--red);
+}
+
 .update-info {
   display: flex;
   align-items: center;
@@ -256,6 +283,16 @@ function delta(v) {
 
   .thumb {
     width: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-slide {
+    animation: none;
+  }
+
+  .hover-zoom:hover {
+    transform: none;
   }
 }
 </style>

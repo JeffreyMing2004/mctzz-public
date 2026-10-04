@@ -44,10 +44,10 @@ function shuffle() {
 
 <template>
   <div>
-    <PageHeader :parts="['猎人', '档案库']" subtitle="点击猎人卡片访问 B 站主页" />
+    <PageHeader :parts="['猎人', '档案库']" subtitle="点击猎人卡片访问 B 站主页" v-reveal="{ y: 20, duration: 0.6 }" />
 
     <div class="container">
-      <div class="toolbar">
+      <div class="toolbar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <div class="search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
             <circle cx="11" cy="11" r="8" />
@@ -70,14 +70,15 @@ function shuffle() {
         </div>
       </div>
 
-      <div class="hunter-grid">
+      <div class="hunter-grid" :key="`${keyword}|${sortBy}|${shuffleSeed}`">
         <a
-          v-for="h in list"
+          v-for="(h, i) in list"
           :key="h.id"
           :href="h.bilibili_link"
           target="_blank"
           rel="noopener noreferrer"
-          class="hunter-card hover-lift"
+          class="hunter-card hover-zoom"
+          v-reveal="{ y: 20, duration: 0.5, delay: Math.min(i * 0.06, 0.9) }"
         >
           <img class="avatar" :src="h.avatar" :alt="h.name" loading="lazy" />
           <h3>{{ h.name }}</h3>
@@ -91,6 +92,22 @@ function shuffle() {
 </template>
 
 <style scoped>
+/* 原站猎人卡片 whileHover:{scale:1.02} */
+.hover-zoom {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.02);
+  border-color: var(--red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-zoom:hover {
+    transform: none;
+  }
+}
+
 .toolbar {
   display: flex;
   align-items: center;

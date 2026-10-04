@@ -27,10 +27,15 @@ const sections = [
 
 <template>
   <div>
-    <PageHeader :parts="['游戏', '规则']" subtitle="全面了解游戏机制，快速上手成为高手" />
+    <PageHeader :parts="['游戏', '规则']" subtitle="全面了解游戏机制，快速上手成为高手" v-reveal="{ y: 20, duration: 0.6 }" />
 
     <div class="container rules-wrap">
-      <section v-for="sec in sections" :key="sec.title" class="rule-block">
+      <section
+        v-for="(sec, i) in sections"
+        :key="sec.title"
+        class="rule-block"
+        v-reveal="{ y: 20, duration: 0.5, delay: (i + 1) * 0.1 }"
+      >
         <div class="rule-head">
           <h3>{{ sec.title }}</h3>
           <p>{{ sec.desc }}</p>

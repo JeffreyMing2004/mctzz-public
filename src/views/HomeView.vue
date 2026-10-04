@@ -48,29 +48,37 @@ const totalEpisodes = episodes.length;
     <section class="hero">
       <div class="hero-watermark" aria-hidden="true"></div>
       <div class="hero-inner container">
-        <img class="hero-logo" src="/images/brand/hero-logo.png" alt="方块逃亡中" />
-        <p class="tagline">茂逃百科 逃亡如此简单</p>
-        <router-link to="/episodes" class="cta">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="cta-icon">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-          开始逃亡
-        </router-link>
-        <p class="hero-stats">已收录 {{ totalEpisodes }} 期节目资料</p>
+        <h1 class="hero-logo-wrap" v-reveal="{ y: 30, duration: 0.8 }">
+          <img class="hero-logo" src="/images/brand/hero-logo.png" alt="方块逃亡中" />
+        </h1>
+        <p class="tagline" v-reveal="{ y: 20, duration: 0.8, delay: 0.2 }">
+          茂逃百科 逃亡如此简单
+        </p>
+        <div v-reveal="{ y: 20, scale: 0.9, duration: 0.6, delay: 0.4 }">
+          <router-link to="/episodes" class="cta">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="cta-icon">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            开始逃亡
+          </router-link>
+          <p class="hero-stats">已收录 {{ totalEpisodes }} 期节目资料</p>
+        </div>
       </div>
     </section>
 
     <!-- 绝密档案 -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">绝密<span class="accent">档案</span></h2>
-        <p class="section-subtitle">&nbsp;</p>
-        <div class="archive-grid">
+        <h2 class="section-title" v-reveal="{ mode: 'inview', y: 20, duration: 0.6 }">
+          绝密<span class="accent">档案</span>
+        </h2>
+        <p class="section-subtitle" v-reveal="{ mode: 'inview', y: 20, duration: 0.6 }">&nbsp;</p>
+        <div class="archive-grid" v-reveal="{ mode: 'inview', y: 20, duration: 0.6 }">
           <router-link
             v-for="item in archives"
             :key="item.to"
             :to="item.to"
-            class="archive-card hover-lift"
+            class="archive-card hover-glow"
           >
             <span class="archive-icon">
               <svg
@@ -136,9 +144,16 @@ const totalEpisodes = episodes.length;
     <!-- 最新动态 -->
     <section class="section section-last">
       <div class="container">
-        <h2 class="section-title">最新<span class="accent">动态</span></h2>
-        <p class="section-subtitle">追踪节目最新更新和精彩内容</p>
-        <article class="feature-card">
+        <h2 class="section-title" v-reveal="{ mode: 'inview', y: 20, duration: 0.6 }">
+          最新<span class="accent">动态</span>
+        </h2>
+        <p class="section-subtitle" v-reveal="{ mode: 'inview', y: 20, duration: 0.6 }">
+          追踪节目最新更新和精彩内容
+        </p>
+        <article
+          class="feature-card"
+          v-reveal="{ mode: 'inview', y: 30, duration: 0.6, delay: 0.2 }"
+        >
           <div class="feature-cover">
             <img :src="featured.cover" alt="第五季第二期" />
           </div>
@@ -202,6 +217,20 @@ const totalEpisodes = episodes.length;
   background-position: center 30%;
   opacity: 0.06;
   pointer-events: none;
+  animation: wm-in 1.4s ease-out both;
+}
+
+@keyframes wm-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.06;
+  }
+}
+
+.hero-logo-wrap {
+  font-size: 0;
 }
 
 .hero-inner {
@@ -249,6 +278,12 @@ const totalEpisodes = episodes.length;
   margin-top: 28px;
   color: var(--text-dim);
   font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-watermark {
+    animation: none;
+  }
 }
 
 .section {

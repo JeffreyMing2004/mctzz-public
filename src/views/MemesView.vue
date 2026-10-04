@@ -15,10 +15,10 @@ const filtered = computed(() =>
 
 <template>
   <div>
-    <PageHeader :parts="['梗', '百科']" subtitle="回顾那些让人印象深刻的经典瞬间和名场面" />
+    <PageHeader :parts="['梗', '百科']" subtitle="回顾那些让人印象深刻的经典瞬间和名场面" v-reveal="{ y: 20, duration: 0.6 }" />
 
     <div class="container">
-      <div class="filter-bar">
+      <div class="filter-bar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <button
           type="button"
           class="filter-btn"
@@ -39,14 +39,15 @@ const filtered = computed(() =>
         </button>
       </div>
 
-      <div class="meme-grid">
+      <div class="meme-grid" :key="activeCategory">
         <a
-          v-for="meme in filtered"
+          v-for="(meme, i) in filtered"
           :key="meme.id"
           :href="meme.bilibili_link"
           target="_blank"
           rel="noopener noreferrer"
-          class="meme-card hover-lift"
+          class="meme-card hover-lift-soft"
+          v-reveal="{ y: 20, duration: 0.5, delay: Math.min(i * 0.06, 0.9) }"
         >
           <span class="badge">{{ meme.category }}</span>
           <h3>{{ meme.title }}</h3>

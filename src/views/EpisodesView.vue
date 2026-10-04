@@ -21,10 +21,10 @@ const filtered = computed(() =>
 
 <template>
   <div>
-    <PageHeader :parts="['往期', '内容']" subtitle="回顾每一期的精彩瞬间，找到你想重温的节目" />
+    <PageHeader :parts="['往期', '内容']" subtitle="回顾每一期的精彩瞬间，找到你想重温的节目" v-reveal="{ y: 20, duration: 0.6 }" />
 
     <div class="container">
-      <div class="filter-bar">
+      <div class="filter-bar" v-reveal="{ y: 20, duration: 0.6, delay: 0.2 }">
         <button
           type="button"
           class="filter-btn"
@@ -45,14 +45,16 @@ const filtered = computed(() =>
         </button>
       </div>
 
-      <div class="episode-grid">
+      <!-- :key 随筛选变化，切换分类时重放交错入场 -->
+      <div class="episode-grid" :key="activeCategory">
         <a
-          v-for="ep in filtered"
+          v-for="(ep, i) in filtered"
           :key="ep.id"
           :href="ep.bilibili_link"
           target="_blank"
           rel="noopener noreferrer"
-          class="episode-card hover-lift"
+          class="episode-card hover-lift-soft"
+          v-reveal="{ y: 20, duration: 0.5, delay: Math.min(i * 0.06, 0.9) }"
         >
           <div class="cover">
             <img :src="ep.cover_image" :alt="ep.title" loading="lazy" />
